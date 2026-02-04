@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RupertG Notes - Download</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app-styles.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <meta name="theme-color" content="#2563eb">
+</head>
+<body>
+    <div class="app-mobile">
+        <header class="app-header-mobile">
+            <div class="app-icon">
+                <div class="icon-circle">📝</div>
+            </div>
+            <h1>RupertG Notes</h1>
+            <p class="app-subtitle">Simple notes for Android</p>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>Download the App</h2>
+                    <p>Get RupertG Notes on your Android device for offline access and enhanced features.</p>
+                </div>
+                <div class="app-preview">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="app-screenshot">
+                                <div class="note-card-preview">
+                                    <div class="note-title-preview">Welcome to RupertG Notes!</div>
+                                    <div class="note-content-preview">Your notes are automatically saved and synced across all your devices.</div>
+                                    <div class="note-meta-preview">Today at 2:30 PM</div>
+                                </div>
+                                <div class="note-card-preview checklist-preview">
+                                    <div class="note-title-preview">Shopping List</div>
+                                    <div class="checklist-items-preview">
+                                        <div class="checklist-item-preview">
+                                            <span class="checkbox-preview">☐</span>
+                                            <span>Milk</span>
+                                        </div>
+                                        <div class="checklist-item-preview">
+                                            <span class="checkbox-preview checked">✓</span>
+                                            <span>Bread</span>
+                                        </div>
+                                        <div class="checklist-item-preview">
+                                            <span class="checkbox-preview">☐</span>
+                                            <span>Eggs</span>
+                                        </div>
+                                    </div>
+                                    <div class="note-meta-preview">3 items • 1 completed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="download-section">
+                <h3>Download Now</h3>
+                <div class="download-container">
+                    <div class="download-info">
+                        <div class="version-info">
+                            <span class="version-label">Version:</span>
+                            <span class="version-number">1.0.0</span>
+                        </div>
+                        <div class="size-info">
+                            <span class="size-label">Size:</span>
+                            <span class="size-number">5.60 MB</span>
+                        </div>
+                        <div class="compatibility-info">
+                            <span class="compatibility-label">Android:</span>
+                            <span class="compatibility-number">7.0+</span>
+                        </div>
+                    </div>
+                    
+                    <div class="download-buttons">
+                        <a href="assets/rupertgnotes.apk" download="rupertgnotes.apk" class="download-btn primary-btn" id="downloadBtn">
+                            <span class="download-icon">⬇️</span>
+                            <span class="download-text">Download APK</span>
+                        </a>
+                        <button class="download-btn secondary-btn" id="installBtn">
+                            <span class="install-icon">📱</span>
+                            <span class="install-text">Install Instructions</span>
+                        </button>
+                    </div>
+
+                    <div class="security-notice">
+                        <div class="notice-icon">🔒</div>
+                        <div class="notice-content">
+                            <strong>Security Notice:</strong> This APK is safe to download. Enable "Install from unknown sources" in your Android settings to install.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instructions-section" id="instructionsSection" style="display: none;">
+                <h3>Installation</h3>
+                <div class="instructions-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Download</strong>
+                            <p>Click the download button above</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Enable Installation</strong>
+                            <p>Go to Settings > Security > Unknown sources and enable it</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <strong>Install</strong>
+                            <p>Open your file manager, find the APK, and tap to install</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <strong>Launch</strong>
+                            <p>Open the app and start taking notes!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2026 RupertG Notes</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadBtn = document.getElementById('downloadBtn');
+            const installBtn = document.getElementById('installBtn');
+            const instructionsSection = document.getElementById('instructionsSection');
+            
+            downloadBtn.addEventListener('click', (e) => {
+                downloadBtn.classList.add('downloading');
+                setTimeout(() => {
+                    downloadBtn.classList.remove('downloading');
+                }, 2000);
+            });
+            
+            installBtn.addEventListener('click', () => {
+                const isVisible = instructionsSection.style.display === 'block';
+                instructionsSection.style.display = isVisible ? 'none' : 'block';
+                installBtn.textContent = isVisible ? 'Install Instructions' : 'Hide Instructions';
+            });
+        });
+    </script>
+</body>
+</html>
