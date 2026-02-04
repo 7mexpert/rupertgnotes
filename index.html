@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RupertG Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>RupertG Notes</h1>
+            <div class="header-actions">
+                <button class="add-btn" id="addNoteBtn" aria-label="Add Note">
+                    <span class="plus-icon">+</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="note-types-modal" id="noteTypesModal" style="display: none;">
+            <div class="modal-content">
+                <h3>Create New Note</h3>
+                <div class="type-options">
+                    <button class="type-option" data-type="text">
+                        <div class="option-icon">📝</div>
+                        <span>Text Note</span>
+                    </button>
+                    <button class="type-option" data-type="checklist">
+                        <div class="option-icon">✅</div>
+                        <span>Checklist</span>
+                    </button>
+                </div>
+                <button class="cancel-btn" id="cancelModalBtn">Cancel</button>
+            </div>
+        </div>
+
+        <main class="notes-container" id="notesContainer">
+            <!-- Notes will be rendered here -->
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
